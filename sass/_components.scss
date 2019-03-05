@@ -201,10 +201,51 @@
 // Gallery
 
 .gallery {
-  // display: flex;
+  display: flex;
 
   &__photo {
     width: 100%;
-    display: inline; // image should be block element so there will be no white space below them like when they are inline .
+    display: block; // image should be block element so there will be no white space below them like when they are inline .
   }
+}
+
+//---------------------------
+// overview
+
+.overview {
+  display: flex;
+  // justify-content: space-between;  wrong approach
+  align-items: center;
+  border-bottom: 1px solid var(--color-Grey-light-2);
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    display: flex; // so stars become centerd exactly. no white space below like inline element
+    margin-right: auto; // this is the right way - felx  + margin
+  }
+  &__icon-star,
+  &__icon-location {
+    height: 1.7rem;
+    width: 1.7rem;
+    fill: var(--color-primary);
+  }
+  &__location {
+  }
+  &__rating {
+  }
+  &__rating-average {
+  }
+}
+
+//---------------------------
+// Button inline
+
+.btn-inline {
 }
