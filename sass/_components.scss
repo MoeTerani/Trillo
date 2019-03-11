@@ -444,3 +444,73 @@
   flex-direction: column;
   align-items: center;
 }
+
+//---------------------------
+// Call to action
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+  &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+
+  background-image: linear-gradient(
+    to right,
+    var(--color-Primary-light),
+    var(--color-Primary-dark)
+  );
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    // it will select all the child element and this way we follow DRY
+    height: 100%; // 100% of the parent, it inherits from parent
+    width: 100%;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    padding: 2rem 0;
+    position: absolute;
+    top: -100%; // goes upp 100% od the parent size
+    left: 0;
+  }
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-Primary-light),
+      var(--color-Primary-dark)
+    );
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}

@@ -657,4 +657,69 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.cta__book-now {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-Primary-light)), to(var(--color-Primary-dark)));
+  background-image: linear-gradient(to right, var(--color-Primary-light), var(--color-Primary-dark));
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn > * {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn__visible {
+  padding: 2rem 7.5rem;
+}
+
+.btn__invisible {
+  padding: 2rem 0;
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+
+.btn:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(var(--color-Primary-light)), to(var(--color-Primary-dark)));
+  background-image: linear-gradient(to left, var(--color-Primary-light), var(--color-Primary-dark));
+}
+
+.btn:hover .btn__visible {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.btn:hover .btn__invisible {
+  top: 0;
+}
+
+.btn:focus {
+  outline: none;
+  -webkit-animation: pulsate 1s infinite;
+          animation: pulsate 1s infinite;
+}
 /*# sourceMappingURL=main.css.map */
