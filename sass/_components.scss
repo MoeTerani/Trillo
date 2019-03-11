@@ -280,8 +280,17 @@
   cursor: pointer;
   transition: all 0.2s;
 
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
+
   &:hover {
     color: var(--color-Grey-dark-1);
+
+    span {
+      margin-left: 8px;
+    }
   }
   &:focus {
     outline: none;
@@ -429,4 +438,9 @@
     font-family: sans-serif;
     z-index: 1;
   }
+}
+.user-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
